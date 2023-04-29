@@ -24,6 +24,10 @@ class UserService {
 
         return { user: userDto, ...tokens };
     }
+
+    async getAll() {
+        return userModel.find();
+    }
 }
 
 export default new UserService();
